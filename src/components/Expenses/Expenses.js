@@ -9,13 +9,13 @@ return (
         {
             props.item.map(
                 expense=>(
-                    <ExpenseItem date={ expense.date } title={ expense.title } amount={ expense.amount } />
+                    <ExpenseItem key={ expense.id } date={ expense.date } title={ expense.title } amount={ expense.amount } />
             )
             )
         }
     
         
     </Card>
-)
+);
 }
 export default Expenses;

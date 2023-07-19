@@ -5,19 +5,20 @@ const ExpenseForm=(props)=>{
   const [enteredAmount, setEnteredAmount]=useState('');
   const [enteredDate, setEnteredDate]=useState('');
     const TitleChangeHandler=(event)=>{
-        setEnteredTitle(event.target.value)
+        setEnteredTitle(event.target.value);
     }
     const AmountChangeHandler=(event)=>{
-        setEnteredAmount(event.target.value)
+        setEnteredAmount(event.target.value);
     }
     const DateChangeHandler=(event)=>{
-        setEnteredDate(event.target.value)
-    }
+        setEnteredDate(event.target.value);
+    };
+
     const submitHandler=(event)=>{
       event.preventDefault();                    //prevents the page to refresh//
        const expenseData={
         title:enteredTitle,
-        amount: enteredDate,
+        amount: enteredAmount,
         date: new Date(enteredDate)
        }
        props.onSaveExpenseData(expenseData);
